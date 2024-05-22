@@ -11,12 +11,23 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
-          <i class="bi bi-user"></i>
+        <a class="nav-link collapsed" href="/admin/student">
+          <i class="bi bi-backpack3"></i>
           <span>Student</span>
         </a>
       </li>
 
+      {{-- TUGAS 
+        migration
+        models
+        controller
+        views--}}
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/admin/course">
+          <i class="bi bi-journal-bookmark"></i>
+          <span>Courses</span>
+        </a>
+      </li>
 
     </ul>
 
