@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\DasboardController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
@@ -29,4 +30,7 @@ Route::get('admin/dashboard', [DasboardController::class, 'index']);
 
 // untuk menampilkan alamat student
 Route::get('admin/student', [StudentController::class, 'index']);
+
+// untuk menampilkan alamat courses
+Route::get('admin/courses', [CoursesController::class, 'index']);
 

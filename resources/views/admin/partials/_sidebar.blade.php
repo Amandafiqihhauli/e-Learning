@@ -23,7 +23,7 @@
         controller
         views--}}
       <li class="nav-item">
-        <a class="nav-link collapsed" href="/admin/course">
+        <a class="nav-link collapsed" href="/admin/courses">
           <i class="bi bi-journal-bookmark"></i>
           <span>Courses</span>
         </a>
