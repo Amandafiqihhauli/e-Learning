@@ -1,7 +1,7 @@
 @extends('admin.main')
 @section('content')
 <div class="pagetitle">
-    <h1>Dashboard</h1>
+    <h1>Courses</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"></li>
@@ -13,7 +13,7 @@
   <section class="section">
     <div class="card">
         <div class="card-body">
-            <a href="#" class="btn btn-primary">+ Course</a>
+            <a href="/admin/courses/create" class="btn btn-primary my-3">+ Course</a>
 
             <table class="table mt-2">
                 <tr>
@@ -29,9 +29,12 @@
                     <td>{{ $courses->name }}</td>
                     <td>{{ $courses->category }}</td>
                     <td>{{ $courses->desc }}</td>
-                    <td>
-                        <a href="#" class="btn btn-warning">Edit</a>
-                        <a href="#" class="btn btn-danger">Hapus</a>
+                    <td class="d-flex">
+                        <a href="/admin/courses/edit/{{ $courses->id }}" class="btn btn-warning me-2">Edit</a>
+                        <form action="/admin/courses/delete/{{ $courses->id }}" method="post">
+                          @method('delete')
+                          @csrf 
+                          <button class="btn btn-danger" type="submit" onclick="return confirm('Apakah anda yakin?')">Delete</button>
                     </td>
                 </tr>
                 @endforeach  
