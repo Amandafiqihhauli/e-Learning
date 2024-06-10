@@ -21,6 +21,7 @@
                     <th>NIM</th>
                     <th>Class</th>
                     <th>Major</th>
+                    <th>Courses</th>
                     <th>Action</th>
                 </tr>
                 @foreach ($students as $student) 
@@ -30,15 +31,17 @@
                     <td>{{ $student->nim }}</td>
                     <td>{{ $student->class }}</td>
                     <td>{{ $student->major }}</td>
+                    <td>{{ $student->courses->name ?? 'Tidak Ada Data'}}</td>
+
                     <td class="d-flex ">
                         <a href="/admin/student/edit/{{ $student->id }}" class="btn btn-warning me-2">Edit</a>
                         <form action="/admin/student/delete/{{ $student->id }}" method="post">
                         @method('delete')
-                        @csrf 
+                        @csrf  
                         <button class="btn btn-danger" type="submit" onclick="return confirm('Apakah anda yakin?')">Delete</button>
                       </form>
                     </td>
-                </tr>
+                </tr> 
                 @endforeach
             </table>
         </div>

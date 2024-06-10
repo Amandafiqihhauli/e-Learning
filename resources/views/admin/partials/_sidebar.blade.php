@@ -12,7 +12,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/admin/student">
-          <i class="bi bi-backpack3"></i>
+          <i class="bi bi-person-circle"></i>
           <span>Student</span>
         </a>
       </li>
