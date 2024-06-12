@@ -47,7 +47,7 @@
                             <option value="">Choose a course</option>
                             @foreach($courses as $course)
                             <option value="{{ $course->id }}" {{ $student->courses_id == $course->id ? 'selected' : '' }}>{{ $course->name }}</option>
-                            @endforeach
+                            @endforeach 
                         </select>
                     </div>
 
